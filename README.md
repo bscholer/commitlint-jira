@@ -35,7 +35,7 @@ module.exports = {
 }
 ```
 
-##### To lint commits before they are created you can use Husky's 'commit-msg' hook
+##### To lint commits before they are created you can use [husky](https://github.com/typicode/husky)'s 'commit-msg' hook
 
 Run the following in your terminal to create the proper hook.
 
@@ -55,6 +55,25 @@ For version 4 and under of Husky use the following syntax instead in your `packa
   }
 }
 ```
+
+##### You can use [pre-commit](https://github.com/pre-commit/pre-commit) as an alternative to husky
+
+You need to have the `pre-commit` package manager installed. Follow the [installation guideline](https://pre-commit.com/#installation).
+
+1. Add the following to your `.pre-commit-config.yaml`
+    ```
+    - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+      rev: <latest tag>
+      hooks:
+          - id: commitlint
+            stages: [commit-msg]
+            additional_dependencies: ['commitlint-plugin-jira-rules', 'commitlint-config-jira']
+    ```
+
+2. Install the commit-msg hook in your project repo
+    ```bash
+    pre-commit install --hook-type commit-msg
+    ```
 
 ## Rules
 
