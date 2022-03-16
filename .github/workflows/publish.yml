@@ -39,4 +39,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           registry-url: 'https://npm.pkg.github.com'
-
+      # Temporarily commented because I don't have yet generated a Github token, and also I need to rethink if that feature is even needed
+      # - name: Publish to GitHub
+      #   run: |
+      #     yes | npm run publish:packages:github
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
