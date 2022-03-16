@@ -77,8 +77,6 @@ You need to have the `pre-commit` package manager installed. Follow the [install
 
 ## Rules
 
-## Rules
-
 `jira-task-id-empty` - this rule check if commit message task id is not empty.
 
 ```bash
