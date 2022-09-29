@@ -85,7 +85,7 @@ git commit -m"IB-2121, IB-21: My commit message body"
 git commit -m"IB-0000: My commit message body"
 ```
 
-`jira-task-id-max-length` - this rule check if jira task id length is loonger that the provided value.
+`jira-task-id-max-length` - this rule check if jira task id length is longer that the provided value.
 
 ```bash
 // Preconfigured and recommended value in commitlint-config-jira is 9 chars
